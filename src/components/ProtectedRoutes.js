@@ -1,7 +1,7 @@
 // src/components/ProtectedRoute.js
 import React from 'react';
 import { Redirect } from '@docusaurus/router';
-import { isAuthenticated } from '../utils/auth';
+import { isAuthenticated } from '../utils/useIsAuthenticated';
 
 const ProtectedRoute = ({ children }) => {
   if (!isAuthenticated()) {

@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { useHistory } from '@docusaurus/router';
 import OriginalDocItem from '@theme-original/DocItem';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useIsAuthenticated from '../../utils/auth'; // Your auth hook
+// import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useIsAuthenticated from '../../utils/useIsAuthenticated'; // Your auth hook
 
 
 export default function DocItemWrapper(props) {
   const { frontMatter } = props.content;
   const isAuthenticated = useIsAuthenticated();
+
   const isProtected = frontMatter?.protected === true;
   const history = useHistory();
 

@@ -1,4 +1,3 @@
-// src/pages/login.js
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 
@@ -8,11 +7,8 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // For demo purposes, used localStorage for db
-    localStorage.setItem('authToken', 'dummy-token');
-    localStorage.setItem('userRoles', JSON.stringify(['user'])); // Or ['admin'] for admin users
+    localStorage?.setItem('authToken', 'dummy-token');
     
-    // Redirect to home or previous page
     window.location.href = '/';
   };
 
